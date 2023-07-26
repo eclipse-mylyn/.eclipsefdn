@@ -8,7 +8,6 @@ orgs.newOrg('eclipse-mylyn') {
     description: "",
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: true,
-    members_can_create_teams: true,
     members_can_delete_repositories: true,
     name: "Eclipse Mylyn",
     packages_containers_internal: false,
