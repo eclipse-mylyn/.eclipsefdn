@@ -41,6 +41,9 @@ orgs.newOrg('eclipse-mylyn') {
     orgs.newRepo('mylyn-website') {
       allow_update_branch: false,
       default_branch: "master",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "master",
+      gh_pages_source_path: "/",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
