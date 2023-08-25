@@ -100,6 +100,7 @@ orgs.newOrg('eclipse-mylyn') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs') {
+      has_discussions: true,
       allow_update_branch: false,
       default_branch: "master",
       secret_scanning: "disabled",
