@@ -35,8 +35,6 @@ orgs.newOrg('eclipse-mylyn') {
     orgs.newRepo('.github') {
       allow_update_branch: false,
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('mylyn-website') {
@@ -45,8 +43,6 @@ orgs.newOrg('eclipse-mylyn') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -59,8 +55,6 @@ orgs.newOrg('eclipse-mylyn') {
     },
     orgs.newRepo('org.eclipse.mylyn') {
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
@@ -73,83 +67,67 @@ orgs.newOrg('eclipse-mylyn') {
     orgs.newRepo('org.eclipse.mylyn.all') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.builds') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.commons') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.context') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.context.mft') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs') {
       allow_update_branch: false,
       default_branch: "master",
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs.intent.main') {
       allow_update_branch: false,
       default_branch: "master",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs.vex') {
       allow_update_branch: false,
       default_branch: "master",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.incubator') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.reviews') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.reviews.ui') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.tasks') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.versions') {
       archived: true,
       default_branch: "master",
-      secret_scanning: "disabled",
       web_commit_signoff_required: false,
     },
   ],
