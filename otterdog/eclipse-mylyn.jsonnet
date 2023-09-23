@@ -33,13 +33,17 @@ orgs.newOrg('eclipse-mylyn') {
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('mylyn-website') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
@@ -54,6 +58,8 @@ orgs.newOrg('eclipse-mylyn') {
       ],
     },
     orgs.newRepo('org.eclipse.mylyn') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
       branch_protection_rules: [
@@ -90,19 +96,25 @@ orgs.newOrg('eclipse-mylyn') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs.intent.main') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.docs.vex') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('org.eclipse.mylyn.incubator') {
