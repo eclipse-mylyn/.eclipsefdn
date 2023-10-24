@@ -2,7 +2,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-mylyn') {
   settings+: {
-    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     members_can_change_project_visibility: false,
@@ -38,6 +37,10 @@ orgs.newOrg('eclipse-mylyn') {
       delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('mylyn-website') {
       allow_merge_commit: true,
@@ -48,6 +51,9 @@ orgs.newOrg('eclipse-mylyn') {
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -62,6 +68,10 @@ orgs.newOrg('eclipse-mylyn') {
       delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+        default_workflow_permissions: "write",
+      },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 0,
@@ -74,26 +84,41 @@ orgs.newOrg('eclipse-mylyn') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.builds') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.commons') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.context') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.context.mft') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.docs') {
       allow_merge_commit: true,
@@ -102,6 +127,10 @@ orgs.newOrg('eclipse-mylyn') {
       delete_branch_on_merge: false,
       has_discussions: true,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.docs.intent.main') {
       allow_merge_commit: true,
@@ -109,6 +138,9 @@ orgs.newOrg('eclipse-mylyn') {
       default_branch: "master",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.docs.vex') {
       allow_merge_commit: true,
@@ -116,31 +148,49 @@ orgs.newOrg('eclipse-mylyn') {
       default_branch: "master",
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.incubator') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.reviews') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.reviews.ui') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.tasks') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
     orgs.newRepo('org.eclipse.mylyn.versions') {
       archived: true,
       default_branch: "master",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
     },
   ],
 }
