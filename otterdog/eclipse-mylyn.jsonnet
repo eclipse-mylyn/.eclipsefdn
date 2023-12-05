@@ -121,6 +121,7 @@ orgs.newOrg('eclipse-mylyn') {
       },
     },
     orgs.newRepo('org.eclipse.mylyn.docs') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
