@@ -134,6 +134,7 @@ orgs.newOrg('eclipse-mylyn') {
       },
     },
     orgs.newRepo('org.eclipse.mylyn.docs.intent.main') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -144,6 +145,7 @@ orgs.newOrg('eclipse-mylyn') {
       },
     },
     orgs.newRepo('org.eclipse.mylyn.docs.vex') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
