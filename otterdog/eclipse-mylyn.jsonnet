@@ -5,7 +5,6 @@ orgs.newOrg('eclipse-mylyn') {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse Mylyn",
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
