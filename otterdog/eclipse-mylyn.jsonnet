@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-mylyn') {
+orgs.newOrg('tools.mylyn', 'eclipse-mylyn') {
   settings+: {
     description: "",
     name: "Eclipse Mylyn",
