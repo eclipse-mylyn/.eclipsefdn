@@ -20,6 +20,9 @@ orgs.newOrg('tools.mylyn', 'eclipse-mylyn') {
     },
   ],
   secrets+: [
+    orgs.newOrgSecret('DEVELOCITY_API_TOKEN') {
+      value: "pass:bots/tools.mylyn/develocity.eclipse.org/api-token",
+    },
     orgs.newOrgSecret('GITLAB_API_TOKEN') {
       value: "pass:bots/tools.mylyn/gitlab.eclipse.org/api-token",
     },
