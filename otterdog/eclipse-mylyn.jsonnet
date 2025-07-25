@@ -73,6 +73,11 @@ orgs.newOrg('tools.mylyn', 'eclipse-mylyn') {
           requires_strict_status_checks: true,
         },
       ],
+      secrets: [
+        orgs.newRepoSecret('MYLYN_BOT_PAT') {
+          value: "pass:bots/tools.mylyn/github.com/token-hd6470",
+        },
+      ],
     },
     orgs.newRepo('org.eclipse.mylyn.all') {
       archived: true,
